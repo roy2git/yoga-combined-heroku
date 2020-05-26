@@ -14,6 +14,11 @@ Root folder has Node/express code
 3)In the root folder run npm server.js<br />
 Then access http://localhost:3000/
 
+Or,<br />
+Clone these 2 repos and run concurrently<br />
+https://github.com/roy2git/Yoga-FrontEnd<br />
+https://github.com/roy2git/Yoga-Backend
+
 Screenshots
 ---
 ![yoga-1](https://user-images.githubusercontent.com/64326150/82871451-37770080-9f4f-11ea-98b9-4a6938c88b4e.png)
