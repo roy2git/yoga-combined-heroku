@@ -15,7 +15,7 @@ class YogaEditDelete extends Component {
 
   componentDidMount = () => {
     axios
-      .get("http://localhost:5000/api/yogaPoses/" + this.props.match.params.id)
+      .get("/api/yogaPoses/" + this.props.match.params.id)
       .then((response) => {
         console.log(response);
         this.setState({ name: response.data.name });
@@ -39,10 +39,7 @@ class YogaEditDelete extends Component {
     };
 
     axios
-      .put(
-        "http://localhost:5000/api/yogaPoses/" + this.props.match.params.id,
-        pose
-      )
+      .put("/api/yogaPoses/" + this.props.match.params.id, pose)
       .then((response) => {
         console.log(response);
         this.setState({ redirect: true });
@@ -58,9 +55,7 @@ class YogaEditDelete extends Component {
     );
     if (confirmDelete) {
       axios
-        .delete(
-          "http://localhost:5000/api/yogaPoses/" + this.props.match.params.id
-        )
+        .delete("/api/yogaPoses/" + this.props.match.params.id)
         .then((response) => {
           console.log(response);
           this.setState({ redirect: true });

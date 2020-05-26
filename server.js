@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb+srv://roy:Mankulam@cluster0-04dk7.mongodb.net/yogaDb",
+    "mongodb+srv://roy:Mankulam@cluster0-04dk7.mongodb.net/yogaDb?retryWrites=true&w=majority",
   { useFindAndModify: false, useNewUrlParser: true },
   (err) => {
     if (!err) {
@@ -43,5 +43,3 @@ mongoose.connect(
     }
   }
 );
-
-//mongodb+srv://roy:Mankulam@cluster0-04dk7.mongodb.net/test

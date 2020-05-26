@@ -25,12 +25,10 @@ class YogaAdd extends Component {
       time: this.state.time,
     };
 
-    axios
-      .post("http://localhost:5000/api/yogaPoses", yogaPose)
-      .then((response) => {
-        console.log(response);
-        this.setState({ redirect: true });
-      });
+    axios.post("/api/yogaPoses", yogaPose).then((response) => {
+      console.log(response);
+      this.setState({ redirect: true });
+    });
   };
 
   render() {

@@ -8,7 +8,7 @@ class YogaHome extends Component {
   };
 
   componentDidMount = () => {
-    let promise = axios.get("http://localhost:5000/api/yogaPoses");
+    let promise = axios.get("/api/yogaPoses");
     promise
       .then((response) => {
         console.log("res  is ----------->" + response);
@@ -17,7 +17,10 @@ class YogaHome extends Component {
         console.log(response.data);
         this.setState({ yogaPoses: response.data });
       })
-      .catch((error) => console.log("error------------->" + error));
+      .catch((error) => {
+        console.log("error------------->" + error);
+        //console.log(co);
+      });
   };
 
   render() {
